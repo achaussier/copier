@@ -147,7 +147,7 @@ def copy(
         raise
     finally:
         if is_update:
-            shutil.rmtree(conf.src_path)
+            shutil.rmtree(conf.src_path, ignore_errors=True)
 
 
 def copy_local(conf: ConfigData) -> None:
